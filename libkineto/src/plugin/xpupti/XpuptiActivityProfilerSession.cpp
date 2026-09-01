@@ -7,16 +7,22 @@
  */
 
 #include "XpuptiActivityProfilerSession.h"
+#include "TraceSpan.h"
 #include "XpuptiActivityApi.h"
-
+#include "XpuptiProfilerMacros.h"
 #include "time_since_epoch.h"
-
-#include <pti/pti_version.h>
-#include <sycl/sycl.hpp>
 
 #include <algorithm>
 #include <chrono>
+#include <functional>
+#include <iostream>
 #include <iterator>
+#include <ostream>
+#include <ranges>
+
+#include <fmt/format.h>
+#include <pti/pti_version.h>
+#include <sycl/sycl.hpp>
 
 namespace KINETO_NAMESPACE {
 
